@@ -1,5 +1,5 @@
-OBJS 	= main.o Poluonumo.o Array.o Sy.o  
-SOURCE	= main.cpp Poluonumo.cpp Array.cpp Sy.cpp
+OBJS 	= main.o Poluonumo.o Array.o Sy.o Md.o 
+SOURCE	= main.cpp Poluonumo.cpp Array.cpp Sy.cpp Md.cpp
 HEADER  = classes.h 
 OUT  	= main
 CXX		= g++
@@ -20,6 +20,8 @@ Array.o: Array.cpp classes.h
 
 Sy.o: Sy.cpp classes.h
 	$(CXX) $(FLAGS) Sy.cpp
+Md.o: Md.cpp classes.h
+	$(CXX) $(FLAGS) Md.cpp
 
 
 clean:
