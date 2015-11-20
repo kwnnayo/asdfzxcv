@@ -44,6 +44,8 @@ public:
 		int get(int);						//printing a data value
 		int getA0(int);						//returns data[0] for the A0 matrix
 		int getAk(int,int);					//returns the data[k] for the Ak matrix
+		double set(int);
+		double setAk(int,int);
 		void adeiasma();					//deletes data
 	};
 //________________________________________________________________________________________________________________________
