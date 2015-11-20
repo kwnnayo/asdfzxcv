@@ -12,7 +12,7 @@ int main(){
 Sy S;
 Poluonumo Q,P;
 
-		int choice,choice2,d1, d2,Ak;
+		int choice,choice2,d1, d2,Ak,d;
 		string ch;
 		
 		cout<<"Please,write 1 for equations,or 2 for their degrees :";
