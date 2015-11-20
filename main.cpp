@@ -143,7 +143,9 @@ if ( choice==1){
 			S.create_sylvester();
 			S.init_sylvester(Ar1,Ar2,arry1,arry2,mon1,mon2);
 			S.printA0_A1(Ar1,Ar2,arry1,arry2,mon1,mon2,Ak);
-
+			d=S.getd();
+			M.create_md(d);
+			
 				for(j=0;j<arry1;j++){
 					printf("Ar1[%d].data[%d] of first polynomial is deleted \n",j,j+1);
 					Ar1[j].adeiasma();
