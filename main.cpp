@@ -8,11 +8,11 @@
 using namespace std;
 
 int main(){
-
+Md M;
 Sy S;
 Poluonumo Q,P;
 
-		int choice,choice2,d1, d2,Ak,d;
+		int choice,choice2,d1, d2,Ak,d,size,max1,max2;
 		string ch;
 		
 		cout<<"Please,write 1 for equations,or 2 for their degrees :";
@@ -139,13 +139,14 @@ if ( choice==1){
 				printf("Filling Ar2[%d].data[%d] \n",j,j+1);
 				Ar2[j].gemisma(Q,mon2,j);	
 			}
-			
-			S.create_sylvester();
+			max1=S.getmax1();
+			max2=S.getmax2();
+			size=S.create_sylvester();
 			S.init_sylvester(Ar1,Ar2,arry1,arry2,mon1,mon2);
 			S.printA0_A1(Ar1,Ar2,arry1,arry2,mon1,mon2,Ak);
 			d=S.getd();
-			M.create_md(d);
-			
+			M.create_md(d,size);
+			M.init_md(S,arry1,arry2,mon1,mon2,Ak,max1,max2,size);
 				for(j=0;j<arry1;j++){
 					printf("Ar1[%d].data[%d] of first polynomial is deleted \n",j,j+1);
 					Ar1[j].adeiasma();
@@ -303,6 +304,7 @@ if ( choice==1){
 				S.create_sylvester();
 				S.init_sylvester(Ar1,Ar2,arry1,arry2,mon1,mon2);
 				S.printA0_A1(Ar1,Ar2,arry1,arry2,mon1,mon2,Ak);
+				
 				
 					for(j=0;j<arry1;j++){
 						printf("Ar1[%d].data[%d] of first polynomial is deleted \n",j,j+1);
