@@ -63,5 +63,14 @@ public:
 		 void printA0_A1(Array *, Array*,int,int,int,int,int); //prints A0 or Ak,depend on the given value
 		 void delete_sylv();	//deletes sylvester
 	};
+//________________________________________________________________________________________________________________________
+	class Md{
+	Array **md;
+	public:
+	
+		void create_md(int);
+		void init_md();
+	
+	};
 
 	#endif
